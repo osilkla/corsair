@@ -33,7 +33,7 @@ const Filters = ({ filterTools, setEvents }) => {
         onChange={(e) => setSearchEvent(e.target.value)}
       />
       <select className='border p-2 rounded' value={filterType} onChange={(e) => setFilterType(e.target.value)}>
-        <option value=''>All Type</option>
+        <option value='All Type'>All Type</option>
         <option value='Action'>Action</option>
         <option value='Screen'>Screen</option>
         <option value='Autres'>Autres</option>

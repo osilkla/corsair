@@ -6,11 +6,12 @@ import Table from './components/Table/Table';
 import LoadMore from './components/LoadMore/LoadMore';
 import Hero from './components/Hero/Hero';
 import Stats from './components/Stats/Stats';
+import { useScraper } from './hooks/useScraper';
 
 function App() {
   // Get events flux
-  const { events, setEvents } = useRudderMock(true);
-
+  // const { events, setEvents } = useRudderMock(true);
+  const { events, setEvents } = useScraper('https://development-corsair.rogervoice.com/live');
   const [displayedEvents, setDisplayedEvents] = useState([]);
   const [buffer, setBuffer] = useState([]);
 

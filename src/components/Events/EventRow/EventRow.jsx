@@ -50,7 +50,7 @@ const EventRow = ({ event }) => {
             <span
               className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border ${getTypeStyles(event.type)}`}
             >
-              {event.type}
+              {event.type || event.properties.rv_type || 'system'}
             </span>
           </div>
         </td>
