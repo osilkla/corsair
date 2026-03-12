@@ -17,31 +17,31 @@ const EventRow = ({ event }) => {
   const getHoverStyles = (type) => {
     switch (type?.toLowerCase()) {
       case 'screen':
-        return 'hover:bg-blue-50/75';
+        return 'hover:bg-blue-50/75 dark:hover:bg-blue-600/10';
       case 'action':
-        return 'hover:bg-orange-50/75';
+        return 'hover:bg-orange-50/75 dark:hover:bg-orange-600/10';
       default:
-        return 'hover:bg-gray-50/75';
+        return 'hover:bg-gray-50/75 dark:hover:bg-gray-100/10';
     }
   };
   const hasProperties = event.properties && Object.keys(event.properties).length > 0;
 
   return (
     <>
-      <tr className={`border-b border-gray-100 transition-colors ${getHoverStyles(event.type)}`}>
-        <td className='px-4 py-3 text-sm text-gray-500 font-mono'>{event.timestamp}</td>
+      <tr className={`border-b border-gray-100 dark:border-gray-700 transition-colors ${getHoverStyles(event.type)}`}>
+        <td className='px-4 py-3 text-sm text-gray-500 font-mono dark:text-gray-400'>{event.timestamp}</td>
 
         <td className='px-4 py-3'>
           <Badge type={event.device} text={event.device} />
         </td>
 
-        <td className='px-4 py-3 text-sm font-medium text-gray-700'>
+        <td className='px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-200'>
           {event.accountId || <span className='text-gray-300 italic'>none</span>}
         </td>
 
         <td className='px-4 py-3'>
           <div className='flex items-center '>
-            <span className=' text-sm font-medium text-gray-700'>{event.eventName}</span>
+            <span className=' text-sm font-medium text-gray-700 dark:text-gray-200'>{event.eventName}</span>
           </div>
         </td>
 

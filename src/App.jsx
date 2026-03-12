@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className='p-6 font-sans bg-gray-50 min-h-screen'>
+    <div className='p-6 font-sans bg-gray-50 dark:bg-gray-900 min-h-screen'>
       <Hero />
       <Filters filterTools={filterTools} setEvents={handleClear} />
       <Stats filteredEvents={filteredEvents} />

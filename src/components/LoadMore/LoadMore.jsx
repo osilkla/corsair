@@ -10,8 +10,8 @@ const LoadMore = ({ buffer, releaseBuffer }) => {
         className='bg-gradient-to-r from-purple-400 to-pink-600 text-white px-6 py-2 rounded-full shadow-2xl flex items-center gap-2 cursor-pointer'
       >
         <span className='relative flex h-3 w-3'>
-          <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75'></span>
-          <span className='relative inline-flex rounded-full h-3 w-3 bg-white'></span>
+          <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-white  dark:bg-gray-800 opacity-75'></span>
+          <span className='relative inline-flex rounded-full h-3 w-3 bg-white  '></span>
         </span>
         {CTA_TEXT}
       </button>
