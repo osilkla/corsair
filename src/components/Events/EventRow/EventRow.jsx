@@ -59,7 +59,7 @@ const EventRow = ({ event }) => {
           {hasProperties && (
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className='text-indigo-600 hover:text-indigo-900 text-sm font-medium flex items-center justify-end w-full'
+              className='text-indigo-600 hover:text-indigo-900 text-sm font-medium flex items-center justify-end w-full cursor-pointer'
             >
               {isOpen ? 'Hide Props' : 'See Props'}
               <span className={`ml-1 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>▼</span>
