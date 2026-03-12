@@ -2,13 +2,18 @@ import EventRow from '../../Events/EventRow/EventRow';
 import EmptyState from '../EmptyState/EmptyState';
 
 const TableBody = ({ filteredEvents }) => {
+  if (!filteredEvents || filteredEvents.length === 0) {
+    return (
+      <tbody>
+        <EmptyState />
+      </tbody>
+    );
+  }
   return (
     <tbody>
-      {filteredEvents.length > 0 ? (
-        filteredEvents.map((event, index) => <EventRow key={event.timestamp + index} event={event} />)
-      ) : (
-        <EmptyState />
-      )}
+      {filteredEvents.map((event, index) => (
+        <EventRow key={event.timestamp + index} event={event} />
+      ))}
     </tbody>
   );
 };
