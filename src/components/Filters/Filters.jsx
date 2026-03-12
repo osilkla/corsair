@@ -36,7 +36,7 @@ const Filters = ({ filterTools, setEvents }) => {
         <option value='All Type'>All Type</option>
         <option value='Action'>Action</option>
         <option value='Screen'>Screen</option>
-        <option value='Autres'>Autres</option>
+        <option value='System'>System</option>
       </select>
 
       <div className='flex gap-2 w-full md:w-auto'>

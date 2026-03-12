@@ -47,7 +47,9 @@ export const useScraper = (url) => {
             default:
               if (th !== '' && td !== undefined) {
                 currentEvent.properties[th] = td;
-                if (th === 'rv_type') currentEvent.type = td;
+                if (th === 'rv_type') {
+                  currentEvent.type = td;
+                }
               }
               break;
           }

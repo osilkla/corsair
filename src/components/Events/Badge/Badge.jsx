@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Badge = ({ type, text }) => {
   const getTypeStyles = (type) => {
     switch (type?.toUpperCase()) {

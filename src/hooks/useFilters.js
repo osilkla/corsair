@@ -17,7 +17,10 @@ const useFilters = (events) => {
       const matchDevice = filterDevice === 'All' || ev.device === filterDevice;
       const matchAccount = ev.accountId?.includes(searchAccount);
       const matchEvent = ev.eventName?.toLowerCase().includes(searchEvent.toLowerCase());
-      const matchType = filterType === 'All Type' || ev.type?.toLowerCase().includes(filterType.toLowerCase());
+      const matchType =
+        filterType === 'All Type' ||
+        ev.type?.toLowerCase().includes(filterType.toLowerCase()) ||
+        (ev.type === undefined && filterType === 'System'); // Consider events without type as 'System'
       return matchDevice && matchAccount && matchEvent && matchType;
     });
   }, [events, filterDevice, searchAccount, searchEvent, filterType]);
