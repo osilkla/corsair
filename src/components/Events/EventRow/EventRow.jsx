@@ -61,7 +61,7 @@ const EventRow = ({ event }) => {
               onClick={() => setIsOpen(!isOpen)}
               className='text-indigo-600 hover:text-indigo-900 text-sm font-medium flex items-center justify-end w-full'
             >
-              {isOpen ? 'Masquer' : 'Voir détails'}
+              {isOpen ? 'Hide Props' : 'See Props'}
               <span className={`ml-1 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>▼</span>
             </button>
           )}
